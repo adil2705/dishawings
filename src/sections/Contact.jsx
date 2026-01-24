@@ -29,7 +29,7 @@ const Contact = () => {
     ];
 
     return (
-        <section id="contact" className="py-24 px-4 relative overflow-hidden">
+        <section id="contact" className="py-12 md:py-24 px-4 relative overflow-hidden">
             {/* Background Decorative Element */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-lavender-200/20 rounded-full blur-[120px] -z-10" />
 
@@ -49,7 +49,7 @@ const Contact = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-start">
+                <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-start">
                     {/* Left Column: Form */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -92,7 +92,7 @@ const Contact = () => {
                         </div>
 
                         {/* Address */}
-                        <div className="bg-lavender-600 rounded-[2.5rem] p-8 md:p-10 text-white shadow-xl h-full flex items-center">
+                        <div className="bg-lavender-600 rounded-[2.5rem] p-6 md:p-10 text-white shadow-xl h-full flex items-center">
                             <div className="flex items-start gap-4">
                                 <div className="w-12 h-12 bg-white/20 rounded-2xl flex items-center justify-center flex-shrink-0">
                                     <MapPin size={24} className="text-white" />
