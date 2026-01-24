@@ -33,7 +33,7 @@ const Hero = ({ onGetStarted }) => {
     };
 
     return (
-        <section id="home" className="py-20 px-4 mb-20">
+        <section id="home" className="py-12 md:py-20 px-4 mb-12 md:mb-20">
             <div className="max-w-5xl mx-auto text-center">
                 {/* Tagline */}
                 <motion.h1

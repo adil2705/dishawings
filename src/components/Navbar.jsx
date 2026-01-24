@@ -23,7 +23,7 @@ const Navbar = ({ onGetStarted }) => {
                     {/* Logo */}
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <img src={logo} alt="Dishawings Trust Logo" className="w-auto h-24 object-contain" />
+                        <img src={logo} alt="Dishawings Trust Logo" className="w-auto h-16 md:h-24 object-contain" />
                     </div>
 
                     {/* Desktop Navigation */}

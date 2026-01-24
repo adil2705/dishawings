@@ -58,7 +58,7 @@ const Services = ({ services, selectedServices, onToggleService, onVoiceSupport 
                         whileHover={{ scale: 1.02 }}
                         viewport={{ once: true }}
                         onClick={handleWhatsApp}
-                        className="bg-white rounded-3xl p-8 cursor-pointer shadow-lg hover:shadow-xl transition-all"
+                        className="bg-white rounded-3xl p-6 md:p-8 cursor-pointer shadow-lg hover:shadow-xl transition-all"
                     >
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
@@ -84,7 +84,7 @@ const Services = ({ services, selectedServices, onToggleService, onVoiceSupport 
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
                         onClick={onVoiceSupport}
-                        className="bg-white rounded-3xl p-8 cursor-pointer shadow-lg hover:shadow-xl transition-all"
+                        className="bg-white rounded-3xl p-6 md:p-8 cursor-pointer shadow-lg hover:shadow-xl transition-all"
                     >
                         <div className="flex flex-col items-center text-center">
                             <div className="w-16 h-16 bg-lavender-100 rounded-full flex items-center justify-center mb-4">

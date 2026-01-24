@@ -41,7 +41,7 @@ const DonationSection = () => {
                         </p>
                     </div>
 
-                    <div className="p-8 text-center">
+                    <div className="p-6 md:p-8 text-center">
                         {/* QR Code Scanner */}
                         <div className="mb-6">
                             <div className="inline-flex items-center justify-center mb-3">
@@ -59,14 +59,14 @@ const DonationSection = () => {
                                 <img
                                     src="/qr-scanner.png"
                                     alt="Payment QR Code Scanner"
-                                    className="w-80 h-80 object-contain"
+                                    className="w-full max-w-[20rem] h-auto aspect-square object-contain"
                                     onError={(e) => {
                                         e.target.style.display = 'none';
                                         e.target.nextElementSibling.style.display = 'flex';
                                     }}
                                 />
                                 {/* Fallback placeholder */}
-                                <div className="hidden flex-col items-center justify-center w-80 h-80 bg-white rounded-lg">
+                                <div className="hidden flex-col items-center justify-center w-full max-w-[20rem] h-auto aspect-square bg-white rounded-lg">
                                     <QrCode className="text-lavender-400 mb-2" size={64} />
                                     <p className="text-gray-500 text-sm">QR Code Scanner</p>
                                     <p className="text-gray-400 text-xs mt-1">Place at: /public/qr-scanner.png</p>
