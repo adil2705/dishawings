@@ -47,7 +47,7 @@ const DonationSection = () => {
                                     e.preventDefault();
                                     document.getElementById('scanner')?.scrollIntoView({ behavior: 'smooth' });
                                 }}
-                                className="flex-none w-[calc(33.333%-11px)] snap-start relative overflow-hidden rounded-2xl h-[350px] sm:h-[400px] md:h-[550px] group shadow-sm bg-transparent block"
+                                className="flex-none w-[85%] sm:w-[calc(50%-8px)] md:w-[calc(33.333%-11px)] snap-start relative overflow-hidden rounded-2xl h-[350px] sm:h-[400px] md:h-[550px] group shadow-sm bg-transparent block"
                             >
                                 <img
                                     src={`/i${num}.jpeg`}
