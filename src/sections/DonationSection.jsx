@@ -21,6 +21,52 @@ const DonationSection = () => {
                     </p>
                 </motion.div>
 
+                {/* Image Slider */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="mb-12 relative"
+                >
+                    <style dangerouslySetInnerHTML={{__html: `
+                        .hide-scrollbar::-webkit-scrollbar {
+                            display: none;
+                        }
+                        .hide-scrollbar {
+                            -ms-overflow-style: none;
+                            scrollbar-width: none;
+                        }
+                    `}} />
+                    <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 px-2 hide-scrollbar">
+                        {[1, 2, 3, 4, 5, 6, 8, 9, 10].map((num) => (
+                            <a 
+                                key={num}
+                                href="#scanner"
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    document.getElementById('scanner')?.scrollIntoView({ behavior: 'smooth' });
+                                }}
+                                className="flex-none w-[calc(33.333%-11px)] snap-start relative overflow-hidden rounded-2xl h-[350px] sm:h-[400px] md:h-[550px] group shadow-sm bg-transparent block"
+                            >
+                                <img
+                                    src={`/i${num}.jpeg`}
+                                    alt={`Donation Impact ${num}`}
+                                    className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-2 md:p-6 pb-4">
+                                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex flex-col items-center mx-auto text-center w-full">
+                                        <p className="text-white font-semibold mb-2 text-sm md:text-base hidden md:block w-full text-center">Help Us Serve</p>
+                                        <span className="inline-flex justify-center items-center text-[10px] md:text-xs font-medium bg-lavender-500 text-white px-2 py-1 md:px-3 md:py-1.5 rounded-full whitespace-nowrap">
+                                            Donate Now <Heart size={12} className="ml-1.5 fill-current flex-shrink-0" />
+                                        </span>
+                                    </div>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
+                </motion.div>
+
                 {/* Main Card */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -43,7 +89,7 @@ const DonationSection = () => {
 
                     <div className="p-6 md:p-8 text-center">
                         {/* QR Code Scanner */}
-                        <div className="mb-6">
+                        <div id="scanner" className="mb-6 scroll-mt-24">
                             <div className="inline-flex items-center justify-center mb-3">
                                 <div className="bg-lavender-100 p-2 rounded-full">
                                     <QrCode className="text-lavender-600" size={24} />
